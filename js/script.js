@@ -69,7 +69,34 @@ function createTable(data) {
   })
 }
 
+function clearInputs() {
+  heightInput.value = ''
+  weightInput.value = ''
+}
+
+function validDigits(text) {
+  return text.replace(/[^0-9,]/g, '')
+}
+
 //Inicialização do projeto
 createTable(data)
 
 //Eventos
+
+heightInput.addEventListener('input', (e) => {
+  const updateValue = validDigits(e.target.value)
+
+  e.target.value = updateValue
+})
+weightInput.addEventListener('input', (e) => {
+  const updateValue = validDigits(e.target.value)
+
+  e.target.value = updateValue
+})
+
+
+
+clearBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  clearInputs()
+})
