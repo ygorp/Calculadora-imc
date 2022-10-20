@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-top: 20vh;
   color: #FFFFFF;
 }
 
@@ -26,6 +26,12 @@ body {
   background-color: #1d1e33;
   padding: 2rem;
   border-radius: 10px;
+}
+
+@media (max-width: 510px) {
+  .container {
+    min-width: 300px;
+  }
 }
 
 /*IMC Form*/
